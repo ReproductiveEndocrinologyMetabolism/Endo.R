@@ -17,9 +17,12 @@ Endometrium analysis in R (Endo.R) is a downstream data analysis pipeline based 
 
 Eriksson, G., Li, C., et al. Single-Cell Profiling of the Human Endometrium in Polycystic Ovary Syndrome: Uncovering Disease Signatures and Treatment Responses. Manuscript (2024)
 
-# Description
-Below are instructions on how to build the project directory required for the pipeline, required input and description about the scripts
+For validation of the snRNA-seq data. spatial RNA-sequencing (Stereo-seq) was performed. This repository also contains code used for the analysis. 
 
+## Description
+Below are instructions on how to build the project directory required for the snRNA-seq and Stereo-seq pipeline, required input and description about the scripts.
+
+# 10X snRNA-seq of endometrium
 ## Project directory
 Create a project directory and copy the scripts to it.
 
@@ -45,7 +48,7 @@ The scripts in the pipeline will automatically generate a /Output directory in t
 ## Running the scripts
 Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts. Below follows brief description of each script and step.
 
-### 0. Endo.R Preprocessing
+### 0. Individual sample preprocessing
 
 ### 1. Sample integration
 
@@ -72,6 +75,10 @@ Now you are ready to run the scripts. Run the scripts in the numbered order and 
 ### 12. Correlation analysis of gene expression and clinical measurments
 
 ### 13. Scripts for data visualisation and handling
+
+# Stereo-seq of endometrium
+## Project directory
+Create a project directory and copy the scripts to it.
 
 # Acknowledgement
 
