@@ -24,7 +24,7 @@ Below are instructions on how to build the project directory required for the pi
 Create a project directory and copy the scripts to it.
 
 ## Input directory
-Create a data directory in the project directory as such: MUSENDIPOSER/Data/. Within the /Data directory, create a directory named /CellRanger_Count.  
+Create a data directory in the project directory as such: EndoR/Data/. Within the /Data directory, create a directory named /CellRanger_Count.  
 
 In Data/CellRanger_Count, create a folder for each sample (Data/CellRanger_Count/Sample_X) containing Cell Ranger output for each sample and the required "filtered_feature_bc_matrix" folder which is generated after running Cell Ranger.    Create the directory by running:
 
@@ -43,7 +43,35 @@ bash Create_directory.sh
 The scripts in the pipeline will automatically generate a /Output directory in the project directory. Within it, output folders for each script and analysis will be outputted.
 
 ## Running the scripts
-Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts.
+Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts. Below follows brief description of each script and step.
+
+### 0. Endo.R Preprocessing
+
+### 1. Sample integration
+
+### 2. Main cell type clustering
+
+### 3. Main cluster annotation
+
+### 4. Subsetting of the main clusters
+
+### 5. Sub-clustering and annotation
+
+### 6. Calculating differential gene expression 
+
+### 7. Analysis of differential gene expression and gene ontology enrichment
+
+### 8. Visualisation of genes and ontologies
+
+### 9. Subcluster projection on main Seurat object
+
+### 10. CellChat ligand-receptor interaction analysis
+
+### 11. CELLECT - CELLEX GWAS integration
+
+### 12. Correlation analysis of gene expression and clinical measurments
+
+### 13. Scripts for data visualisation and handling
 
 # Acknowledgement
 
