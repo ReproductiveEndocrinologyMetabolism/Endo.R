@@ -9,7 +9,7 @@
 README
 Author: Gustaw Eriksson  
 Date: 01-11-2024  
-Version: 1.0. 
+Version: 1.0   
 Contact: gustaw.eriksson@ki.se  
 
 # Introduction
