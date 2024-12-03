@@ -49,28 +49,6 @@ print(all_marker_genes)
 
 
 # ## Loading the data
-# Current paths and files to be processed are:  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C01828D2_004_0_LS/01.StandardWorkflow_Result/GeneExpMatrix/C01828D2.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C01829D6_004_16/01.StandardWorkflow_Result/GeneExpMatrix/C01829D6.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132D4_204/01.StandardWorkflow_Result/GeneExpMatrix/C02132D4.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132D6_027_0_LS/01.StandardWorkflow_Result/GeneExpMatrix/C02132D6.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132E3_208/01.StandardWorkflow_Result/GeneExpMatrix/C02132E3.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133D4_220/01.StandardWorkflow_Result/GeneExpMatrix/C02133D4.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133D5_031_0_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02133D5.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133E3_027_16_LS/01.StandardWorkflow_Result/GeneExpMatrix/C02133E3.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133E4_212/01.StandardWorkflow_Result/GeneExpMatrix/C02133E4.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02134C2_005_0_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02134C2.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02134C5_005_16_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02134C5.tissue.gef  
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02134C6_031_16_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02134C6.tissue.gef
-# 
-# ## Selected samples are the following:
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132E3_208/01.StandardWorkflow_Result/GeneExpMatrix/C02132E3.tissue.gef
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133D4_220/01.StandardWorkflow_Result/GeneExpMatrix/C02133D4.tissue.gef
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132D6_027_0_LS/01.StandardWorkflow_Result/GeneExpMatrix/C02132D6.tissue.gef
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133E3_027_16_LS/01.StandardWorkflow_Result/GeneExpMatrix/C02133E3.tissue.gef
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133D5_031_0_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02133D5.tissue.gef
-# ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02134C6_031_16_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02134C6.tissue.gef
-# 
 # Setting the paths
 
 # In[75]:
