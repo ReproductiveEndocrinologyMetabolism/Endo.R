@@ -71,17 +71,17 @@ print(all_marker_genes)
 # ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02133D5_031_0_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02133D5.tissue.gef
 # ./Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02134C6_031_16_Met/01.StandardWorkflow_Result/GeneExpMatrix/C02134C6.tissue.gef
 # 
-# Setting the path below with above paths
+# Setting the paths
 
 # In[75]:
 
 
-data_path = './Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132D6_027_0_LS/01.StandardWorkflow_Result/GeneExpMatrix/C02132D6.tissue.gef'
+data_path = './Data/Endometrium_StereoSeq_Spatial_preprocessed_data_230831/C02132D6_8_PCOS/01.StandardWorkflow_Result/GeneExpMatrix/C02132D6.tissue.gef'
 st.io.read_gef_info(data_path)
-output_bin = './Output/0_Preprocessing_filtered_bin30/C02132D6_027_0_LS_bin30.h5ad'
-output_log2 = './Output/0_Preprocessing_bin30_filtered_log2/C02132D6_027_0_LS_bin30_log2.h5ad'
-output_SCT = './Output/0_Preprocessing_bin30_filtered_SCT/C02132D6_027_0_LS_bin30_SCT.h5ad'
-output_ann = './Output/0_Preprocessing_bin30_filtered_SCT_Ann/C02132D6_027_0_LS_bin30_SCT_Ann.h5ad'
+output_bin = './Output/0_Preprocessing_filtered_bin30/C02132D6_8_PCOS_bin30.h5ad'
+output_log2 = './Output/0_Preprocessing_bin30_filtered_log2/C02132D6_8_PCOS_bin30_log2.h5ad'
+output_SCT = './Output/0_Preprocessing_bin30_filtered_SCT/C02132D6_8_PCOS_bin30_SCT.h5ad'
+output_ann = './Output/0_Preprocessing_bin30_filtered_SCT_Ann/C02132D6_8_PCOS_bin30_SCT_Ann.h5ad'
 
 
 # Load the data and generate a StereoExpData object
