@@ -100,7 +100,7 @@ Correlation analysis between averaged gene expression per sample and clinical va
 Perform Mann-Whitney test (non-parametric, unpaired) on baseline samples cell type nuclei proportions and Wilcoxon signed-rank test (non-parametric, paired) between PCOS and treatment samples cell type nuclei proportions. The script will output tables and plots showing the p-value and adjusted p-value. 
 
 ### 14. Folder of additional scripts for visualisation
-A collection of scripts to explore and visualise generated data.
+A collection of scripts to explore and visualise generated data. This includes generating dotplot of specific genes across all subclusters, plotting gene markers and proportions of major cell types and visualisation of all subcluster with gene markers and QC measurments. 
 
 # Stereo-seq of endometrium
 ## Project directory
