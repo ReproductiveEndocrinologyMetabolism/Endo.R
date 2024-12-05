@@ -95,11 +95,13 @@ The DEG and CellChat tables are combined and overlapped in 10.4, filtering the C
 TINA, PLEASE ADD
 
 ### 12. Correlation analysis of gene expression and clinical measurments
-
+Correlation analysis between averaged gene expression per sample and clinical variables required subsetted subclusters and a table of clinical measurment per sample. The script will load the subcluster subset and perform average expression per sample. Thereafter, correlation analysis will be performed on all DEGs vs. selected clinical measurments. Please adjust the thresholds according to preferences.
 
 ### 13. Cluster proportion analysis
+Perform Mann-Whitney test (non-parametric, unpaired) on baseline samples cell type nuclei proportions and Wilcoxon signed-rank test (non-parametric, paired) between PCOS and treatment samples cell type nuclei proportions. The script will output tables and plots showing the p-value and adjusted p-value. 
 
 ### 14. Folder of additional scripts for visualisation
+A collection of scripts to explore and visualise generated data.
 
 # Stereo-seq of endometrium
 ## Project directory
