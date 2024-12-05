@@ -49,8 +49,12 @@ The scripts in the pipeline will automatically generate a /Output directory in t
 Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts. Below follows brief description of each script and step.
 
 ### 0. Individual sample preprocessing
+Each Cell Ranger (filtered feature bc matrix) is loaded to generate a Seurat object. The object is then filtered according to set QC cutoffs for mitochondrian, ribosomal and hemoglobin %RNA as well as number of feature, features per cell to remove any nuclei of low quality. All filtration step output plots and data in the generated output folder. The object can thereafter be SCT transformed for sample integration.
 
 ### 1. Sample integration
+All preprocessed sample are integrated to one uniform object. In this script, SCT transformation is applied but the script can be edited to use other integration methods. Moreover, the script saves the integration anchors and outputs plots related to the QC.
+
+To be noted, the script requires manual editing, assigning each sample (orig.ident) to a specific group ("Group_Stage). 
 
 ### 2. Main cell type clustering
 
