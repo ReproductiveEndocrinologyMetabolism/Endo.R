@@ -29,15 +29,14 @@ Below are instructions on how to build the project directory required for the sn
 Create a project directory and copy the scripts to it.
 
 ## Input directory
-Create a data directory in the project directory as such: EndoR/Data/. Within the /Data directory, create a directory named /CellRanger_Count.  
+Create a data directory in the project directory as such: EndoR_snRNA_seq_analysis/Data/. Within the /Data directory, create a directory named /CellRanger_Count.  
 
 In Data/CellRanger_Count, create a folder for each sample (Data/CellRanger_Count/Sample_X) containing Cell Ranger output for each sample and the required "filtered_feature_bc_matrix" folder which is generated after running Cell Ranger.    Create the directory by running:
 
 ```
-mkdir EndoR  
-mkdir EndoR/Data  
-mkdir EndoR/Data/CellRanger_Count  
-cp -r CellRanger_sample_X EndoR/Data/CellRanger_Count
+mkdir EndoR_snRNA_seq_analysis
+mkdir EndoR_snRNA_seq_analysis/Data
+mkdir EndoR_snRNA_seq_analysis/Data/CellRanger_Count
 ```
 Or by running Create_directory.sh script in the project directory:
 
@@ -50,7 +49,7 @@ The scripts in the pipeline will automatically generate a /Output directory in t
 ## Running the scripts
 Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts. Below follows brief description of each script and step.
 
-### 0. Individual sample preprocessing
+### 0. Individual sample pre-processing
 Each Cell Ranger (filtered feature bc matrix) is loaded to generate a Seurat object. The object is then filtered according to set QC cutoffs for mitochondrian, ribosomal and hemoglobin %RNA as well as number of feature, features per cell to remove any nuclei of low quality. All filtration step output plots and data in the generated output folder. The object can thereafter be SCT transformed for sample integration.
 
 ### 1. Sample integration
@@ -108,15 +107,17 @@ A collection of scripts to explore and visualise generated data.
 Create a project directory and copy the scripts to it.
 
 ## Input directory
-Create a data directory in the project directory as such: EndoR/Data/. Within the /Data directory, create a directory named /CellRanger_Count.  
+Create a data directory in the project directory as such: EndoR_Spatial_RNA_seq_analysis/Data. Within the /Data directory, create a directory named /Endometrium_StereoSeq_Spatial_preprocessed_data.  
 
-In Data/CellRanger_Count, create a folder for each sample (Data/CellRanger_Count/Sample_X) containing Cell Ranger output for each sample and the required "filtered_feature_bc_matrix" folder which is generated after running Cell Ranger.    Create the directory by running:
+01.StandardWorkflow_Result/GeneExpMatrix/C02132D6.tissue.gef
+
+In Data/Endometrium_StereoSeq_Spatial_preprocessed_data, create a folder for each sample (Data/Endometrium_StereoSeq_Spatial_preprocessed_data/Sample_X) containing Stereo-seq 01.StandardWorkflow folder for each sample and the required "GeneExpMatrix" folder which is generated after running SAW by STOmics, containing the X.tissue.gef file. Create the directory by running:
 
 ```
-mkdir EndoR  
-mkdir EndoR/Data  
-mkdir EndoR/Data/CellRanger_Count  
-cp -r CellRanger_sample_X EndoR/Data/CellRanger_Count
+mkdir EndoR_Spatial_RNA_seq_analysis
+mkdir EndoR_Spatial_RNA_seq_analysis/Data
+mkdir EndoR_Spatial_RNA_seq_analysis/Data/Endometrium_StereoSeq_Spatial_preprocessed_data
+cp -r Stereo_seq_sample_X EndoR_Spatial_RNA_seq_analysis/Data/Endometrium_StereoSeq_Spatial_preprocessed_data
 ```
 Or by running Create_directory.sh script in the project directory:
 
@@ -129,15 +130,22 @@ The scripts in the pipeline will automatically generate a /Output directory in t
 ## Running the scripts
 Now you are ready to run the scripts. Run the scripts in the numbered order and make sure to manually check the output between each scripts. Below follows brief description of each script and step.
 
-### 0. Individual sample preprocessing
+### 0. Individual sample pre-processing
+The pre-processing is divided into two parts and is done on individual samples. The first script 00.1 bins the spatial data to a set bin size, in this project bin30. Please try different bin sizes during pre-processing. In the second script 00.2, the data is converted to an Seurat object and filtered based on set QC threshold. Preferably, the thresholds should be similar to the one of the 10X snRNA-seq data to harmonize the datasets. The script will output QC information, transform the data and save a filtered dataset.
 
 ### 1. UMAP label transfer annotation
+Each filtered dataset is SCT transformed and UMAL Label Transfer is done using the individual spatial Seurat object as the query, and the 10x snRNA-seq dataset as the reference. The UMAP label transfer can be done on two different levels, with major cell types or with subclusters. In this project, the major cell types were used.
+
+The label transfer will generate a new vector in the spatial Seurat object called 'Predicted_integrated_label' which will be the annotations.
 
 ### 2. Annotation quality check and filtering
+When performing UMAP label transfer, a prediction score will be calculated to evaluate the quality of the prediction of the specific bin. In this step, bins below a specific threshold can be removed and the score is projected on the spatial map. After filtering, a new Seurat object will be generated and can overwrite the former.
 
 ### 3. Sub-clustering annotated spatial object
+The annonated bins can be subset and re-clustered to identify subclusters using gene markers. In this project, no subclusters were identified.
 
 ### 4. Marker visualisation on full and targeted spatial object
+Markers and genes of interest can be projected on both spatial maps and UMAPs of the spatial Seurat object. The two scripts allow to either visualise the whole spatial object or to subset a region using spatial coordinated (X- and Y-axis) to focus the analysis to a specific region of interest. 
 
 # Acknowledgement
 
