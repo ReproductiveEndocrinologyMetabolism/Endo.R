@@ -84,13 +84,15 @@ if (set.ident == "Combined_labels") {
                     "#7E6148CC") # Lymphatic Brown RGB 228, 33, 28 
 }
 
-idents.order = c("Ctrl_KS204", "Ctrl_KS208", "Ctrl_KS209", "Ctrl_KS210", "Ctrl_KS211",
-                 "LS_KS003_W0", "LS_KS004_W0", "LS_KS027_W0", "LS_KS063_W0", 
-                 "Met_KS005_W0", "Met_KS031_W0", "Met_KS047_W0", "Met_KS054_W0", "Met_KS061_W0", 
-                 "Met_KS065_W0", "Met_KS068_W0", "Met_KS073_W0", 
-                 "Met_KS005_W16", "Met_KS031_W16", "Met_KS047_W16", "Met_KS054_W16",
-                 "Met_KS061_W16", "Met_KS065_W16", "Met_KS073_W16",
-                 "LS_KS003_W16", "LS_KS004_W16", "LS_KS027_W16")
+idents.order = c("1_Control", "2_Control", "3_Control", "4_Control", "5_Control",
+                 "6_PCOS_Lifestyle_W0", "7_PCOS_Lifestyle_W0", "8_PCOS_Lifestyle_W0", "9_PCOS_EA_W0",
+                 "10_PCOS_Metformin_W0", "11_PCOS_Metformin_W0",  "11_PCOS_Metformin_W0",
+                 "12_PCOS_Metformin_W0",  "13_PCOS_Metformin_W0", "14_PCOS_Metformin_W0",
+                 "15_PCOS_Metformin_W0", "16_PCOS_Metformin_W0",  "17_PCOS_Metformin_W0",
+                 "18_PCOS_Lifestyle_W16", "19_PCOS_Lifestyle_W16", "20_PCOS_Lifestyle_W16",
+                 "21_PCOS_Metformin_W16", "22_PCOS_Metformin_W16", "23_PCOS_Metformin_W16",
+                 "24_PCOS_Metformin_W16", "25_PCOS_Metformin_W16", "26_PCOS_Metformin_W16",
+                 "27_PCOS_Metformin_W16")
 
 
 # Setting colours and order for the groups
@@ -154,9 +156,6 @@ if (Generate.excel == TRUE) {
   prop.table_groups = as.data.frame(readRDS(file = paste0(Output.dir, set.ident,"_", "prop.table_groups.rds")))
   count.table_idents = as.data.frame(readRDS(file = paste0(Output.dir, set.ident,"_", "count.table_idents.rds")))
   prop.table_idents = as.data.frame(readRDS(file = paste0(Output.dir, set.ident,"_", "prop.table_idents.rds")))
-  #percentage.table_group = prop.table_groups
-  #percentage.table_group$Percentage = prop.table_groups$Freq*100
-  #percentage.table_group = prop.table_groups[prop.table_groups$Freq * 100,]
   
   # Make list of the tables and name each list element
   table.list = list(table_celltype, table_groups, table_idents, count.table_groups, prop.table_groups, count.table_idents, prop.table_idents)
@@ -196,11 +195,6 @@ prop.df_idents$Percentage = prop.df_idents$Freq*100
 # Convert Var1 (celltypes) to factor and specify level order
 prop.df_groups$Var1 <- factor(prop.df_groups$Var1, levels=order.celltypes)
 prop.df_idents$Var1 <- factor(prop.df_idents$Var1, levels=order.celltypes)
-
-# For testing:
-#celltype.x = "Epithelium"
-#prop.df = prop.df_idents
-#save.label = set.ident
 
 Stacked_barplots <- function(sample.df = prop.df_idents, group.df = prop.table_groups, 
                              stacked.cols = colors.idents, stacked.order = idents.order,
