@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir EndoR_Spatial_RNA_seq_analysis
+mkdir EndoR_Spatial_RNA_seq_analysis/Data
+mkdir EndoR_Spatial_RNA_seq_analysis/Data/Endometrium_StereoSeq_Spatial_preprocessed_data
