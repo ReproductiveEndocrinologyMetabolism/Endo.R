@@ -6,7 +6,7 @@
     |_______||__| \__| |_______/ \______/  (__) _| `._____|
                                                
 
-README
+README  
 Author: Gustaw Eriksson  
 Date: 01-11-2024  
 Version: 1.0   
