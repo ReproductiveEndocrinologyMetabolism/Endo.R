@@ -15,7 +15,7 @@ Contact: gustaw.eriksson@ki.se
 # Introduction
 Endometrium analysis in R (Endo.R) is a downstream data analysis pipeline based on Seurat developed to analysis CellRanger output for used to study 10x Genomics based single-nuclei (sn) RNA-seq on endometrium tissue. The pipeline has been developed to handle datasets of large numbers of cells from multiple study groups, specifically control vs. case vs. treatment. Depending on the size of the dataset, high performance cluster environment has to be used to run the pipeline. Endo.R was used in the following project and publication:  
 
-Eriksson, G., Li, C., et al. Single-Cell Profiling of the Human Endometrium in Polycystic Ovary Syndrome: Uncovering Disease Signatures and Treatment Responses. Manuscript (2024)
+Eriksson, G., Li, C., et al. Single-Cell Profiling of the Human Endometrium in Polycystic Ovary Syndrome: Uncovering Disease Signatures and Treatment Responses. Nature Medicine (2025)
 
 The analysed 10X snRNA-seq data is archived in the European Genome-phenome Archive (EGA), ID: EGAD50000001017 and is released by request.
 
